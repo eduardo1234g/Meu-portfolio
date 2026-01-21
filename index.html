@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portifolio do Eduardo</title>
+</head>
+
+<body>
+
+    <div class="particulas"></div>
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Inicío</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu-link">Contatos</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <img src="./img/Eduardo.png" alt="Foto de Eduardo Silva" class="foto-perfil">
+        <h1>Eduardo Silva</h1>
+        <p class="cabecalho-sub-titulo">Desenvolvedor Front End
+        </p>
+
+    </main>
+    <div class="linguagens">
+        <img src="./img/js.png">
+        <img src="./img/hrml.png">
+        <img src="./img/php.jpg">
+        <img src="./img/bootstrap-tutorial.png">
+        <img src="./img/css.jpg">
+
+    </div>
+
+    <section id="sobre" calss="sobre">
+        <h2 class="sobre-titulo">Sobre mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Olá Sou Desenvolvedor Front End, sou apaixonado por tecnologia, Sou recém formado em Desenvolvedor de
+                sistemas,
+                tenho o ensino médio completo, comecei recentemente uma faculdade de Engenheiro de software. Ainda nao
+                possuo nenhum tipo de Experiência na área,
+                como éstagio, estou em busca do meu primeiro emprego, que possa compreender que tem muitas coisas que
+                tenho que aprender ainda, eu quero evoluir
+                na minha carreira profissional e evoluir na empresa.
+            </p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+
+
+            <div class="projetos-card">
+                <img src="./img/projeto1.png" alt="Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Loja de carros</h3>
+                    <p class="paragrafo-projetos">Uma loja de carros onde possa chamar seus clientes con interatividade, e chamativo para todo tipo de cliente.</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="./img/projeto2.png" alt="Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Pagina de viagens</h3>
+                    <p class="paragrafo-projetos">Essa pagina mostra os melhores lugares do mundo para se viajar atualmente.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="projetos-card">
+                <img src="./img/microsoft.jpg" alt="Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projeto">
+                    <h3 class="info-projetos">Microsoft</h3>
+                    <p class="paragrafo-projetos">uma pagina inspirada na loja da microsoft.
+                        Em resumo dou o meu melhor para entregar a melhor pagina ao cliente.
+                    </p>
+                </div>
+            </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua mensagem" rows="6" id="mensagem"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar Whatzapp</button>
+        </form>
+
+        <div class="gith">
+            <a href="https://github.com/eduardo1234g" target="_blank">
+                <img src="./img/icone-github-grise.png" alt="GitHub">
+            </a>
+
+            <a href="https://www.instagram.com/_eduardosgu_/?next=%2F" target="_blank">
+                <img src="./img/instagram.png" alt="Instagram">
+            </a>
+        </div>
+    </section>
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault()
+
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5531983460610';
+
+            const texto = `Olá! me chamo ${nome}, ${mensagem}`
+            const msgFormatada = encodeURIComponent(texto)
+
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`
+
+            console.log(url)
+
+            window.open(url, '_blank')
+        }
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
